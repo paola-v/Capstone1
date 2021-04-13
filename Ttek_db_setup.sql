@@ -35,7 +35,6 @@ prod_id INT,
 PRIMARY KEY (item_code_year_quarter)
 );
 
-
 CREATE TABLE IF NOT EXISTS sales_period (
 sales_period_id INT AUTO_INCREMENT PRIMARY KEY,
 sales_period INT,
@@ -54,11 +53,13 @@ quantity INT NOT NULL,
 sales_year YEAR NOT NULL,
 sales_week INT NOT NULL, 
 item_code_year_quarter VARCHAR(20),
-sales_period_id INT NOT NULL,
+sales_period_id INT AUTO_INCREMENT NOT NULL,
 FOREIGN KEY (emp_id) REFERENCES sales_team(emp_id), 
 FOREIGN KEY (item_code_year_quarter) REFERENCES unit_price(item_code_year_quarter),
 FOREIGN KEY (sales_period_id) REFERENCES sales_period(sales_period_id) 
 );
+
+
 
 DELIMITER $$
 
@@ -69,7 +70,6 @@ BEGIN
 
 END $$
 DELIMITER ;	
-
 
 
 SELECT * FROM sales;
