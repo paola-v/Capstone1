@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="jumbotron">
+    <p>Add weekly sales by product in the form below: </p>
+    <form method ='POST'>
+        {{form.hidden_tag()}}
+        {{form.emp_id.label}} {{form.emp_id()}}
+        <br>
+        {{form.item_code.label}} {{form.item_code()}}
+        <br>
+        {{form.quantity.label}} {{form.quantity()}}
+        <br>
+        {{form.sales_year.label}} {{form.sales_year()}}
+        <br>
+        {{form.sales_week.label}} {{form.sales_week()}}
+        <br>
+        {{form.submit()}}
+    </form>
+</div>
+
+{% endblock %}
