@@ -5,6 +5,7 @@
 USE traktor_tek_db;
 
 # CHECK THE TABLES
+
 SHOW TABLES;
 SELECT * FROM sales;
 SELECT * FROM sales_team;
@@ -14,6 +15,7 @@ SELECT * FROM sales_period;
 
 
 # JOIN PRODUCT AND UNIT PRICE
+
 SELECT item_code,
 prod_name,
 price, 
@@ -24,10 +26,6 @@ INNER JOIN product p
 ON p.prod_id = up.prod_id;
 
 # JOIN THE MAIN TABLES TO PERFORM ANALYSIS ON : SALES_TEAM, SALES, PRODUCT AND UNIT PRICE AND CREATE A TABLE TO USE IN EXCEL, ADD A REVENUE COLUMN 
-DROP TABLE ttek_analysis;
-
-
-DROP TABLE ttek_analysis;
 
 CREATE TABLE IF NOT EXISTS ttek_analysis AS 
 SELECT st.emp_id,
