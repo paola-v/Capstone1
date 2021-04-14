@@ -1,4 +1,4 @@
-id,sales_period,sales_year,sales_quarter,sunday_date,week_0,week_1
+sales_period_id,sales_period,sales_year,sales_quarter,sunday_date,week_0,week_1
 1,1,2019,1,2018-12-30,0,1
 2,1,2019,1,2019-01-06,1,2
 3,1,2019,1,2019-01-13,2,3
